@@ -1,0 +1,34 @@
+print("\n !!FAULTY CALCULATOR!! \n")
+print("Enter two Numbers")
+i= float(input())
+j= float(input())
+print("ENTER THE OPERATOR")
+print("1. +")
+print("2. -")
+print("3. *")
+print("4. /")
+print("5. **")
+print("6. %")
+k= int(input())
+
+if i==56 and j==9 and k==1 :
+    print("Addition of",i,"and",j, "is 77")
+elif  i==45 and j==3 and k==3:
+    print("Multiplication of",i,"and",j, "is 555")
+elif  i==56 and j==4 and k==4:
+    print("\nDivision of",i,"and",j, "is 4")
+
+elif k== 1 :
+    print("\nAddition of",i,"and",j, "is",i+j)
+
+elif k==2 :
+    print("\nSubtraction of",i,"and",j, "is",i-j)
+elif k == 3:
+    print("\nMultiplication of", i, "and", j, "is", i*j)
+elif k == 4:
+    print("\nDivision of", i, "and", j, "is", i/j)
+elif k == 5:
+    print("\nPower of", i, "isto", j, "is", i**j)
+elif k == 6:
+    print("\nModulo of", i, "and", j, "is", i%j)
+    print("\nTHANK YOU!!")
