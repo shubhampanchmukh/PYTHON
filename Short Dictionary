@@ -1,0 +1,11 @@
+print("SHORT DICTIONARY!!!")
+D= {"elective":   {"related to or working by means of election"},
+   "electrolyte":  {"a liquid or gel which contains ions and can be decomposed by electrolysis, e.g. that present in a battery"},
+   "TUPPLE":     {"a data structure consisting of multiple parts"},
+   "LISTS":      {"A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements"}
+   }
+print("ENTER THE WORD TO SEARCH!!!")
+i=input()
+
+print(D[i])
+print("\n!!THANK YOU!!")
