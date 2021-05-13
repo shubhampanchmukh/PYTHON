@@ -1,0 +1,8 @@
+print("Determine extensions of files!")
+dc = {"abc.py": {"python"},
+      "abc.exe": {"Excel"},
+      "abc.ppt": {"Powerpoint"},
+      "abc.html": {"HTML FILE"}
+      }
+i = input()
+print(dc[i])
