@@ -1,0 +1,16 @@
+n = 7
+g = 0
+print("Guess the number :)")
+while g < 10:
+    n = int(input())
+    if n < 7:
+        print("Input Number Is Small!!")
+    elif n > 7:
+        print("Input Number Is Bigger!!")
+    elif n == 7:
+        print("CONGRATS YOU GUESSED RIGHT IN ",g+1,"ATTEMPTS!!!")
+    g = g + 1
+
+else:
+        print("GAME OVER!!!")
+
