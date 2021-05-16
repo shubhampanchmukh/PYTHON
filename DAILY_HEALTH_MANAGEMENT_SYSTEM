@@ -1,0 +1,92 @@
+import datetime
+
+
+def gettime():
+    return datetime.datetime.now()
+
+
+def take(k):
+    if k == 1:
+        c = int(input("enter 1 for excersise and 2 for food"))
+        if (c == 1):
+            value = input("type here\n")
+            with open("SHUBHAM-ex.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")
+        elif (c == 2):
+            value = input("type here\n")
+            with open("SHUBHAM-food.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")
+    elif (k == 2):
+        c = int(input("enter 1 for excersise and 2 for food"))
+        if (c == 1):
+            value = input("type here\n")
+            with open("ROHAN-ex.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")
+        elif (c == 2):
+            value = input("type here\n")
+            with open("ROHAN-food.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")
+    elif (k == 3):
+        c = int(input("enter 1 for excersise and 2 for food"))
+        if (c == 1):
+            value = input("type here\n")
+            with open("PRATIK-ex.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")
+        elif (c == 2):
+            value = input("type here\n")
+            with open("PRATIK-food.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")
+    else:
+        print("plz enter valid input (1(SHUBHAM),2(ROHAN),3(PRATIK)")
+
+
+def retrieve(k):
+    if k == 1:
+        c = int(input("enter 1 for excersise and 2 for food"))
+        if (c == 1):
+            with open("SHUBHAM-ex.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 2):
+            with open("SHUBHAM-food.txt") as op:
+                for i in op:
+                    print(i, end="")
+    elif (k == 2):
+        c = int(input("enter 1 for excersise and 2 for food"))
+        if (c == 1):
+            with open("ROHAN-ex.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 2):
+            with open("ROHAN-food.txt") as op:
+                for i in op:
+                    print(i, end="")
+    elif (k == 3):
+        c = int(input("enter 1 for excersise and 2 for food"))
+        if (c == 1):
+            with open("PRATIK-ex.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 2):
+            with open("PRATIK-food.txt") as op:
+                for i in op:
+                    print(i, end="")
+    else:
+        print("plz enter valid input (SHUBHAM,ROHAN,PRATIK)")
+
+
+print("health management system: ")
+a = int(input("Press 1 for log the value and 2 for retrieve\n "))
+
+if a == 1:
+    b = int(input("Press 1 for SHUBHAM 2 for ROHAN 3 for PRATIK\n "))
+    take(b)
+else:
+    b = int(input("Press 1 for SHUBHAM 2 for ROHAN 3 for PRATIK\n "))
+    retrieve(b)
