@@ -1,0 +1,49 @@
+# 16 glass in 8 hrs__ 1 glass per 30 min
+#relaxxing eyes after 35 min
+#normal workout after 45 min
+from datetime import datetime
+from pygame import mixer
+from time import time
+print("HEALTHY PROGRAMMER!!!")
+
+def musiconloop(file, stopper):
+    mixer.init()
+    mixer.music.load(file)
+    mixer.music.play()
+    while True:
+        input_of_user = input()
+        if input_of_user == stopper:
+            mixer.music.stop()
+            break
+def logdata(msg):
+    with open("healthylogs.txt","a") as H:
+        H.write(f"{msg} {datetime.now()}\n")
+
+if __name__ == '__main__':
+    init_water=time()
+    init_eyes = time()
+    init_workout = time()
+    waterseconds=60*30
+    eyesseconds=60*35
+    workoutseconds=60*45
+
+while True:
+    if time()-init_water>waterseconds:
+        print("DRINKING WATER TIME!!\nEnter 'DRANK' to stop the alarm")
+        musiconloop('pani_pilo.mp3','DRANK')
+        init_water=time()
+        logdata("Drank Water at: ")
+
+    if time()-init_eyes>eyesseconds:
+        print("RELAXING EYES TIME!!\nEnter 'EYDONE' to stop the alarm")
+        musiconloop('eyes.mp3','EYDONE')
+        init_eyes=time()
+        logdata("Relaxed eyes at: ")
+
+    if time()-init_workout>workoutseconds:
+        print("WORKOUT TIME!!\nEnter 'EXDONE' to stop the alarm")
+        musiconloop('workoutkgf.mp3','EXDONE')
+        init_workout=time()
+        logdata("Workout Done at: ")
+
+
