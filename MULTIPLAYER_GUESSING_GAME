@@ -1,0 +1,58 @@
+import random
+
+a = int(input("Enter the min number for creating random number range:\n"))
+b = int(input("Enter the max number for creating random number range:\n"))
+
+
+l = 0
+n = 0
+m=0
+while l < 2:
+    k = int(input("Press 1 for player_1 and 2 for player_2 or 0 to exit!\n"))
+    if k == 1:
+        print("PLAYER 1:")
+        r = random.randint(a, b)
+        while n < 10:
+            i = int(input(f"Enter the number between {a} and {b}\n"))
+            if r < i:
+                print("Wrong! guess a smaller number again")
+
+            elif r > i:
+                print("Wrong! guess a bigger number again")
+
+            elif r == i:
+                print(f"CORRECT CHOICE!!\nPLAYER 1 TOOK {n+1} chances!!!")
+                break
+            n = n + 1
+
+
+
+    elif k == 2:
+        print("PLAYER 2:")
+        r = random.randint(a, b)
+        while m < 10:
+
+            i = int(input(f"Enter the number between {a} and {b}\n"))
+            if r < i:
+                print("Wrong! guess a smaller number again")
+
+            elif r > i:
+                print("Wrong! guess a bigger number again")
+
+            elif r == i:
+                print(f"CORRECT CHOICE!!\nPLAYER 2 TOOK {m+1} chances!!!")
+                break
+            m=m+1
+
+    elif k == 0:
+        print("THANK YOU!!!")
+
+    l+=1
+
+
+
+
+if n < m:
+    print("PLAYER 1 WINS!!!")
+else:
+    print("PLAYER 2 WINS!!!")
